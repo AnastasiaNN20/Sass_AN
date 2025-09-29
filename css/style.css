@@ -1,0 +1,15 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #cea9f4;
+  color: #3498db;
+}
+
+.container nav ul > li:nth-child(1) {
+  font-size: 20px;
+}
+
+.container nav ul > li:nth-child(2) {
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

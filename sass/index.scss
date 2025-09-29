@@ -1,0 +1,15 @@
+$primary-color: #3498db;
+$background-color: #cea9f4;
+$font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+body {
+  font-family: $font-stack;
+  background-color: $background-color;
+  color: $primary-color;
+}
+.container nav ul>li:nth-child(1){
+font-size: 20px;
+}
+.container nav ul>li:nth-child(2){
+font-size: 20px;
+}
