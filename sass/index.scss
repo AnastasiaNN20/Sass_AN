@@ -1,3 +1,5 @@
+@import"default";
+
 $primary-color: #3498db;
 $background-color: #cea9f4;
 $font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -7,9 +9,90 @@ body {
   background-color: $background-color;
   color: $primary-color;
 }
-.container nav ul>li:nth-child(1){
-font-size: 20px;
+.container{
+width: 100%;
+height: 100%;
+nav{
+  ul{
+    li{
+      &:nth-child(1){
+ font-size: 20px;
+      }
+      &:nth-child(2){
+        font-size: 30px;
+      }
+     
+    }
+  }
+  a{
+    text-decoration: none;
+  }
+}
+
 }
 .container nav ul>li:nth-child(2){
 font-size: 20px;
+}
+
+@mixin transform_Me($prop1,$prop2){
+width: $prop1;
+  height: $prop2;
+  background-color: green;
+  transform: rotate(20deg)scale(1.5);
+}
+.transform{
+  @include transform_Me(400px,500px)
+}
+
+.transform-2{
+  @include transform_Me(200px,300px )
+}
+
+%extend-border{
+  border:1px solid chocolate;
+  padding:10px 
+  $primary-color;
+  font-size: large
+}
+
+%extend-new{
+  margin:20px;
+  color:aqua
+}
+.border{
+  @extend %extend-border;
+}
+
+.border1{
+  @extend %extend-border;
+  margin: 20px;
+}
+
+.element{
+  a{
+    text-decoration: none;
+    color: aquamarine;
+    &:hover{
+      color: azure;
+    }
+  }
+}
+
+.header{
+  font-size: 2px + 4;
+
+  height: 80% - 5%;
+}
+
+.multi{
+  width: 20% * 5;
+
+  height: (24px / 4);
+}
+
+p{
+  &:before{
+    content:"Sass" + quate;
+    font-family: cursive +"serif";
+  }
 }
